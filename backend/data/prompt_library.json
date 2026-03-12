@@ -1,0 +1,50 @@
+[
+  {
+    "id": "compliance-reg-summary",
+    "category": "Compliance",
+    "title": "Regulatory Summary",
+    "description": "Summarize regulatory requirements, key compliance points, and risk implications for a specific corridor.",
+    "template": "You are a compliance analyst at a cross-border remittance company. Summarize the key regulatory requirements for operating in {{country}}. Cover:\n1. Licensing requirements\n2. KYC/AML obligations\n3. Transaction reporting thresholds\n4. Key risks and considerations\n\nBe specific and cite relevant regulatory bodies.",
+    "model": "claude-haiku"
+  },
+  {
+    "id": "ops-incident-report",
+    "category": "Operations",
+    "title": "Incident Report Draft",
+    "description": "Generate structured incident reports from raw notes, following standard templates.",
+    "template": "You are an operations manager at a fintech company. Convert the following raw incident notes into a structured incident report with:\n- Incident ID and timestamp\n- Severity level (P1-P4)\n- Summary\n- Timeline of events\n- Root cause analysis\n- Resolution steps\n- Prevention measures\n\nRaw notes:\n{{notes}}",
+    "model": "claude-sonnet"
+  },
+  {
+    "id": "finance-board-report",
+    "category": "Finance",
+    "title": "Board Report Narratives",
+    "description": "Transform raw financial data into clear, board-ready narratives and key takeaways.",
+    "template": "You are a senior finance analyst preparing a board report for a cross-border payments company. Transform the following financial data into a clear narrative:\n\n{{data}}\n\nInclude:\n- Executive summary (2-3 sentences)\n- Key metrics and trends\n- Notable changes from previous period\n- Risks and opportunities\n- Recommended actions",
+    "model": "claude-sonnet"
+  },
+  {
+    "id": "growth-campaign-copy",
+    "category": "Growth",
+    "title": "Campaign Copy Generator",
+    "description": "Generate multi-channel marketing copy with consistent brand voice and targeted messaging.",
+    "template": "You are a growth marketing specialist at a remittance company serving diaspora communities. Generate marketing copy for:\n\nCampaign: {{campaign_name}}\nTarget corridor: {{corridor}}\nChannel: {{channel}}\nKey message: {{message}}\n\nProvide:\n- Headline (under 10 words)\n- Body copy (2-3 sentences)\n- Call to action\n- Suggested A/B variant",
+    "model": "claude-sonnet"
+  },
+  {
+    "id": "research-market-sizing",
+    "category": "Research",
+    "title": "Market Sizing Analysis",
+    "description": "Structure market data for new corridors with TAM/SAM/SOM breakdown and competitive analysis.",
+    "template": "You are a research analyst evaluating a new remittance corridor. Using available data, provide a structured market sizing analysis for:\n\nCorridor: {{corridor}}\n\nInclude:\n- TAM (Total Addressable Market)\n- SAM (Serviceable Available Market)\n- SOM (Serviceable Obtainable Market)\n- Key competitors and market share estimates\n- Growth drivers and barriers\n- Recommended entry strategy",
+    "model": "claude-sonnet"
+  },
+  {
+    "id": "general-meeting-summary",
+    "category": "General",
+    "title": "Meeting Summary",
+    "description": "Extract key decisions, action items, and owners from meeting notes or transcripts.",
+    "template": "You are an executive assistant at a fast-moving fintech company. Summarize the following meeting notes into a structured format:\n\n{{notes}}\n\nProvide:\n- Meeting title and date\n- Attendees\n- Key decisions made\n- Action items (with owner and deadline)\n- Open questions\n- Next steps",
+    "model": "claude-haiku"
+  }
+]

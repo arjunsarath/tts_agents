@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Claude Sonnet",
+    "category": "AI Assistants",
+    "description": "Advanced reasoning model for complex analysis, strategy, report writing, and nuanced content generation. The go-to for tasks that need deep thinking.",
+    "best_for": "Research synthesis, board reports, regulatory analysis, strategic recommendations"
+  },
+  {
+    "name": "Claude Haiku",
+    "category": "AI Assistants",
+    "description": "Fast, cost-effective model for high-volume tasks — classification, extraction, summarization, and quick Q&A at scale.",
+    "best_for": "Ticket classification, document summarization, data extraction, bulk processing"
+  },
+  {
+    "name": "ChatGPT (OpenAI)",
+    "category": "AI Assistants",
+    "description": "Versatile conversational AI for brainstorming, drafting, translation, and general-purpose reasoning across teams.",
+    "best_for": "Brainstorming, first drafts, translation, general Q&A, ideation sessions"
+  },
+  {
+    "name": "Perplexity AI",
+    "category": "Research & Analysis",
+    "description": "AI-powered research engine that searches the web and synthesizes answers with cited sources in real-time. Ideal for market research and competitive intelligence.",
+    "best_for": "Market research, competitor analysis, regulatory updates, corridor research, fact-checking"
+  },
+  {
+    "name": "Elicit",
+    "category": "Research & Analysis",
+    "description": "AI research assistant that finds, summarizes, and extracts data from academic papers and reports. Built for rigorous research workflows.",
+    "best_for": "Academic research, policy analysis, literature reviews, data extraction from papers"
+  },
+  {
+    "name": "Tavily",
+    "category": "Research & Analysis",
+    "description": "AI search API built for agents and research pipelines. Provides structured, real-time web search with content extraction and ranking.",
+    "best_for": "Automated research pipelines, real-time data gathering, news monitoring, agent-powered search"
+  },
+  {
+    "name": "Gamma",
+    "category": "Presentations & Documents",
+    "description": "AI-powered presentation and document builder. Generate polished decks, reports, and one-pagers from prompts or raw content in minutes.",
+    "best_for": "Board decks, investor presentations, team updates, one-pagers, internal reports"
+  },
+  {
+    "name": "Beautiful.ai",
+    "category": "Presentations & Documents",
+    "description": "Smart presentation software with AI-driven design. Automatically formats slides with professional layouts as you add content.",
+    "best_for": "Client presentations, pitch decks, quarterly reviews, training materials"
+  },
+  {
+    "name": "Notion AI",
+    "category": "Presentations & Documents",
+    "description": "AI writing and knowledge management built into Notion. Draft docs, summarize pages, extract action items, and manage team knowledge.",
+    "best_for": "SOPs, meeting notes, project documentation, knowledge base management, wikis"
+  },
+  {
+    "name": "Midjourney",
+    "category": "Visual & Creative",
+    "description": "Leading AI image generation tool for creating high-quality visuals, illustrations, and creative assets from text prompts.",
+    "best_for": "Marketing visuals, social media assets, campaign imagery, brand illustrations"
+  },
+  {
+    "name": "DALL-E 3",
+    "category": "Visual & Creative",
+    "description": "OpenAI's image generation model with strong prompt adherence and text rendering. Integrated into ChatGPT for seamless creative workflows.",
+    "best_for": "Blog graphics, ad creatives, product mockups, social content, infographic elements"
+  },
+  {
+    "name": "Runway ML",
+    "category": "Visual & Creative",
+    "description": "AI video generation and editing platform. Create videos from text/images, remove backgrounds, and apply generative effects.",
+    "best_for": "Marketing videos, social media clips, product demos, animated explainers"
+  },
+  {
+    "name": "HeyGen",
+    "category": "Visual & Creative",
+    "description": "AI avatar video platform for creating professional talking-head videos with AI presenters in 40+ languages. No camera needed.",
+    "best_for": "Training videos, multilingual explainers, onboarding content, customer-facing videos"
+  },
+  {
+    "name": "Canva AI (Magic Studio)",
+    "category": "Visual & Creative",
+    "description": "AI-powered design suite within Canva — generate images, edit photos, create presentations, and design social posts with natural language.",
+    "best_for": "Social media design, email banners, quick graphics, team templates, brand assets"
+  },
+  {
+    "name": "Jasper",
+    "category": "Marketing & Content",
+    "description": "AI content platform built for marketing teams. Generate on-brand copy across channels with custom brand voice and style guides.",
+    "best_for": "Campaign copy, blog posts, email sequences, ad copy, landing pages"
+  },
+  {
+    "name": "Copy.ai",
+    "category": "Marketing & Content",
+    "description": "AI copywriting tool with workflow automation. Generate marketing content, sales outreach, and social posts at scale.",
+    "best_for": "Social media copy, product descriptions, email outreach, A/B test variants"
+  },
+  {
+    "name": "Descript",
+    "category": "Audio & Video",
+    "description": "AI-powered audio/video editor that works like a text document. Edit by editing the transcript — remove filler words, overdub, and add captions.",
+    "best_for": "Podcast editing, video transcription, meeting recordings, content repurposing"
+  },
+  {
+    "name": "Whisper (OpenAI)",
+    "category": "Audio & Video",
+    "description": "State-of-the-art speech recognition supporting 90+ languages. Transcribe meetings, calls, and audio with high accuracy.",
+    "best_for": "Meeting transcription, call analysis, multilingual audio, voice note processing"
+  },
+  {
+    "name": "Tableau / Looker",
+    "category": "Data & Analytics",
+    "description": "Enterprise dashboarding and visualization platforms. Build interactive reports from structured data with AI-assisted insights.",
+    "best_for": "KPI dashboards, financial reporting, trend analysis, executive reporting"
+  },
+  {
+    "name": "Julius AI",
+    "category": "Data & Analytics",
+    "description": "AI data analyst that connects to spreadsheets, databases, and files. Ask questions in natural language and get charts, insights, and analysis.",
+    "best_for": "Ad-hoc data analysis, financial modelling, CSV/Excel analysis, quick visualizations"
+  },
+  {
+    "name": "Zapier",
+    "category": "Automation & Integration",
+    "description": "No-code integration platform connecting 6000+ apps. Automate data flow between tools without engineering effort.",
+    "best_for": "Cross-tool automation, lead routing, data syncing, trigger-based workflows"
+  },
+  {
+    "name": "Slack Workflow Automations",
+    "category": "Automation & Integration",
+    "description": "Native Slack automation for triggering workflows, posting updates, collecting data via forms, and routing notifications across teams.",
+    "best_for": "Team notifications, approval workflows, status updates, daily digests, standup bots"
+  },
+  {
+    "name": "ChromaDB",
+    "category": "Developer Tools",
+    "description": "Open-source vector database for storing and querying embeddings. The backbone for building RAG pipelines and semantic search over internal documents.",
+    "best_for": "RAG pipelines, semantic search, document retrieval, knowledge base Q&A"
+  },
+  {
+    "name": "Python + FastAPI",
+    "category": "Developer Tools",
+    "description": "High-performance Python web framework for building APIs and AI pipelines. The glue connecting AI models, databases, and frontends.",
+    "best_for": "API development, AI pipeline orchestration, data processing, backend automation"
+  },
+  {
+    "name": "LangChain",
+    "category": "Developer Tools",
+    "description": "Framework for building LLM-powered applications with chains, agents, and retrieval. Simplifies complex multi-step AI workflows.",
+    "best_for": "Multi-step AI workflows, agent chains, document Q&A, structured output parsing"
+  }
+]

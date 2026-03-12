@@ -1,0 +1,92 @@
+UK Money Service Business (MSB) Regulations
+
+Source: Financial Conduct Authority (FCA), Payment Services Regulations 2017 (PSR 2017), Money Laundering Regulations 2017 (MLR 2017)
+
+REGULATORY AUTHORITY
+The Financial Conduct Authority (FCA) is the primary regulator for payment service providers and money service businesses in the United Kingdom. HM Revenue & Customs (HMRC) maintains the MSB register for smaller operators.
+
+LICENSING AND REGISTRATION
+Under the Payment Services Regulations 2017:
+- Payment institutions must be authorized by the FCA
+- Small payment institutions (less than EUR 3 million monthly average) may register instead of full authorization
+- Electronic money institutions require separate FCA authorization
+- All money service businesses must register with HMRC for anti-money laundering supervision
+
+Authorization Requirements:
+- Minimum initial capital of EUR 125,000 for payment institutions
+- Fit and proper person assessment for directors and beneficial owners
+- Business plan demonstrating adequate governance and risk management
+- Professional indemnity insurance or comparable guarantee
+- Adequate safeguarding measures for customer funds
+
+CUSTOMER DUE DILIGENCE (KYC)
+Under the Money Laundering Regulations 2017:
+
+Standard Due Diligence:
+- Full name
+- Date of birth
+- Residential address
+- Verification using reliable, independent sources (e.g., passport, driving license, utility bills)
+
+Enhanced Due Diligence (EDD) Required for:
+- Politically Exposed Persons (PEPs)
+- High-risk third countries (as per HM Treasury list)
+- Complex or unusual transactions
+- Transactions above GBP 15,000 (approximately)
+- Customers from jurisdictions with weak AML frameworks
+
+Simplified Due Diligence Allowed for:
+- Low-risk products and services
+- Certain regulated financial institutions
+- Government bodies and public authorities
+
+TRANSACTION MONITORING AND REPORTING
+- Suspicious Activity Reports (SARs) must be filed with the National Crime Agency (NCA)
+- No specific monetary threshold for SARs — based on suspicion
+- Cross-border wire transfers must include originator and beneficiary information per FATF Rec 16
+- Transfers to/from sanctioned countries must be blocked
+
+SANCTIONS COMPLIANCE
+- UK maintains its own sanctions regime (post-Brexit) under the Sanctions and Anti-Money Laundering Act 2018
+- Office of Financial Sanctions Implementation (OFSI) administers financial sanctions
+- All transactions must be screened against the UK Sanctions List
+- Breach of sanctions is a criminal offense with penalties including imprisonment
+
+KEY CORRIDORS FOR UK REMITTANCES
+The UK is a major source of outbound remittances:
+- UK → India (largest corridor by volume)
+- UK → Pakistan
+- UK → Nigeria
+- UK → Bangladesh
+- UK → Ghana
+- UK → Morocco
+- UK → Philippines
+- UK → Poland
+- UK → Jamaica
+
+SAFEGUARDING REQUIREMENTS
+Payment institutions must safeguard customer funds through one of:
+- Segregation in a separate account at an authorized credit institution
+- Investment in secure, liquid, low-risk assets
+- Insurance policy or comparable guarantee
+
+RECORD KEEPING
+- All KYC documentation: retain for 5 years after the business relationship ends
+- Transaction records: retain for 5 years from the date of the transaction
+- Training records: retain for 5 years
+- Risk assessments: keep up to date and available for inspection
+
+RECENT REGULATORY DEVELOPMENTS (2023-2024)
+- FCA Consumer Duty implementation affecting payment firms
+- Enhanced scrutiny of authorized push payment (APP) fraud protections
+- New rules for crypto-asset financial promotions
+- Strengthened requirements for sanctions screening
+- Focus on operational resilience for payment firms
+- Updated guidance on treatment of PEPs
+
+PENALTIES FOR NON-COMPLIANCE
+- FCA can impose unlimited financial penalties
+- Criminal prosecution for serious AML failures
+- Directors can face personal liability and prohibition orders
+- Potential loss of authorization/registration
+- Public censure and enforcement notices

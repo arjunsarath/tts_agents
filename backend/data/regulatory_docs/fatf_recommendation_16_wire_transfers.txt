@@ -1,0 +1,67 @@
+FATF Recommendation 16 — Wire Transfers
+
+Source: Financial Action Task Force (FATF) International Standards on Combating Money Laundering and the Financing of Terrorism & Proliferation
+
+RECOMMENDATION 16: WIRE TRANSFERS
+
+Countries should ensure that financial institutions include required and accurate originator information, and required beneficiary information, on wire transfers and related messages, and that the information remains with the wire transfer or related message throughout the payment chain.
+
+Countries should ensure that financial institutions monitor wire transfers for the purpose of detecting those which lack required originator and/or beneficiary information, and take appropriate measures.
+
+Countries should ensure that, in the context of processing wire transfers, financial institutions take freezing action and should prohibit conducting transactions with designated persons and entities, as per the obligations set out in the relevant United Nations Security Council resolutions relating to the prevention and suppression of terrorism and terrorist financing and the financing of proliferation of weapons of mass destruction.
+
+ORDERING FINANCIAL INSTITUTION OBLIGATIONS
+
+For cross-border wire transfers of USD/EUR 1,000 or more:
+- The ordering financial institution should obtain and include in the wire transfer required originator information
+- Required originator information includes: name of the originator, the originator account number (or unique transaction reference number), and the originator's address, national identity number, customer identification number, or date and place of birth
+- Required beneficiary information includes: the name of the beneficiary and the beneficiary account number
+
+For cross-border wire transfers below USD/EUR 1,000:
+- The ordering financial institution should include originator and beneficiary information as specified above
+- However, this information need not be verified for accuracy unless there is a suspicion of money laundering or terrorist financing
+
+For domestic wire transfers:
+- The ordering financial institution should include originator information and beneficiary information as required for cross-border transfers
+- Alternatively, it may include only the account number or unique transaction reference number, provided this can be used to trace back to the originator and beneficiary
+
+INTERMEDIARY FINANCIAL INSTITUTION OBLIGATIONS
+
+- Intermediary financial institutions should ensure that all originator and beneficiary information that accompanies a wire transfer is retained with it
+- Where technical limitations prevent the required information from accompanying the wire transfer, the intermediary should keep a record for at least five years
+- The intermediary should take reasonable measures to identify cross-border wire transfers that lack required originator or beneficiary information
+
+BENEFICIARY FINANCIAL INSTITUTION OBLIGATIONS
+
+- Beneficiary financial institutions should take reasonable measures to identify wire transfers that lack required originator or beneficiary information
+- For cross-border transfers of USD/EUR 1,000 or more, the beneficiary institution should verify the identity of the beneficiary if not previously verified
+- Beneficiary institutions should have effective risk-based policies and procedures for determining when to execute, reject, or suspend a wire transfer lacking required information
+
+SANCTIONS SCREENING
+
+Financial institutions processing wire transfers should:
+- Screen wire transfers against relevant sanctions lists
+- Take appropriate freezing action when designated persons or entities are identified
+- Report suspicious transactions related to sanctioned parties
+- Comply with applicable UN Security Council Resolutions
+
+RECORD KEEPING
+
+- All originator and beneficiary information collected should be retained for at least five years
+- Records should be available to appropriate domestic authorities upon request
+- Information should be sufficient to allow the reconstruction of individual transactions
+
+MONEY OR VALUE TRANSFER SERVICES (MVTS)
+
+Countries should ensure that money or value transfer service (MVTS) providers, including those using agents:
+- Comply with Recommendation 16 requirements
+- Include required originator and beneficiary information in transfers
+- Maintain records of transfers for at least five years
+- Are subject to effective monitoring and compliance systems
+
+This is particularly relevant for cross-border remittance operators such as those operating in corridors between:
+- United Kingdom and Morocco, Pakistan, Bangladesh, Ghana, Nigeria
+- United Arab Emirates and Pakistan, India, Philippines, Bangladesh
+- United States and Mexico, Guatemala, Honduras, El Salvador
+- European Union and Morocco, Senegal, Cameroon
+- Canada and Philippines, India, Nigeria

@@ -1,0 +1,80 @@
+Morocco KYC/AML Requirements for Remittance Operators
+
+Source: Bank Al-Maghrib (BAM) Circular 5/W/2017, Morocco Anti-Money Laundering Law 43-05
+
+REGULATORY AUTHORITY
+Bank Al-Maghrib (BAM) is the primary regulatory authority overseeing money transfer and remittance services in Morocco. The Financial Intelligence Unit (Unité de Traitement du Renseignement Financier - UTRF) handles suspicious activity reports.
+
+LICENSING REQUIREMENTS
+- Money transfer operators must obtain authorization from Bank Al-Maghrib
+- Operators must demonstrate adequate capital requirements (minimum MAD 2 million for domestic operators)
+- Foreign operators must partner with licensed Moroccan financial institutions or obtain a specific license
+- Annual compliance audits are mandatory
+
+CUSTOMER IDENTIFICATION (KYC)
+Under Bank Al-Maghrib Circular 5/W/2017:
+
+For individuals:
+- Full legal name as it appears on official identification
+- Date of birth
+- Nationality
+- Valid government-issued photo ID (Carte Nationale d'Identité for Moroccan nationals, passport for foreign nationals)
+- Residential address (proof may be required for transactions exceeding MAD 20,000)
+- Professional activity/occupation
+
+For legal entities:
+- Company registration documents (Registre du Commerce)
+- Articles of association
+- Identity of beneficial owners (25% or more ownership threshold)
+- Tax identification number
+- Registered office address
+
+TRANSACTION THRESHOLDS AND LIMITS
+- Individual transfers up to MAD 20,000: Standard KYC verification
+- Transfers exceeding MAD 20,000: Enhanced due diligence required
+- Transfers exceeding MAD 50,000: Source of funds documentation required
+- Annual cumulative limit of MAD 200,000 for occasional customers
+- No specific per-transaction limit for established business relationships with adequate KYC
+
+AML OBLIGATIONS
+Under Morocco's Anti-Money Laundering Law 43-05:
+- Suspicious Activity Reports (SARs) must be filed with UTRF within 30 days of detection
+- Cash transactions exceeding MAD 150,000 must be reported
+- Record keeping for a minimum of 10 years for all customer identification documents
+- Record keeping for a minimum of 10 years for all transaction records
+- Risk-based approach to customer due diligence
+- Enhanced due diligence for politically exposed persons (PEPs)
+- Ongoing monitoring of business relationships
+
+FOREIGN EXCHANGE CONTROLS
+- Morocco maintains foreign exchange controls managed by the Office des Changes
+- Inbound remittances are generally unrestricted
+- Outbound transfers by Moroccan residents are subject to annual limits
+- Moroccan diaspora benefit from specific foreign exchange advantages (Compte en Dirhams Convertibles)
+
+CORRIDORS
+Morocco is a major recipient of remittances, particularly from:
+- France (largest corridor)
+- Spain
+- Italy
+- United Kingdom
+- Belgium
+- Netherlands
+- United Arab Emirates
+- Canada
+- United States
+
+RECENT REGULATORY DEVELOPMENTS (2023-2024)
+- Bank Al-Maghrib has been strengthening digital payment regulations
+- New guidelines for mobile money and electronic payment services
+- Enhanced cross-border payment monitoring
+- Morocco's ongoing efforts to align with FATF recommendations
+- Focus on beneficial ownership transparency
+- Digital identity verification methods becoming accepted for lower-risk transactions
+
+PENALTIES
+Non-compliance with AML/KYC requirements may result in:
+- Administrative fines up to MAD 1,000,000
+- Suspension or revocation of operating license
+- Criminal penalties including imprisonment for serious violations
+- Enhanced supervisory measures and increased reporting requirements
