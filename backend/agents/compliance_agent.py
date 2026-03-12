@@ -3,7 +3,9 @@ import glob
 import hashlib
 
 import anthropic
-import chromadb
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from pypdf import PdfReader
@@ -11,43 +13,34 @@ from pypdf import PdfReader
 router = APIRouter()
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "regulatory_docs")
-PERSIST_DIR = os.path.join(os.path.dirname(__file__), "..", "vectorstore")
 
 client = anthropic.Anthropic()
-chroma_client = chromadb.PersistentClient(path=PERSIST_DIR)
-collection = None
+
+# In-memory store
+_chunks = []        # list of text strings
+_metadata = []      # list of {"source": filename, "chunk_index": i}
+_vectorizer = None  # TfidfVectorizer
+_tfidf_matrix = None  # sparse matrix
 
 
 def init_vectorstore():
-    """Load all regulatory docs into ChromaDB on startup."""
-    global collection
-    collection = chroma_client.get_or_create_collection(
-        name="regulatory_docs",
-        metadata={"hnsw:space": "cosine"},
-    )
+    """Load all regulatory docs into TF-IDF index on startup."""
     _ingest_all_documents()
 
 
 def rebuild_vectorstore():
-    """Delete and rebuild the entire vector store from current files."""
-    global collection
-    chroma_client.delete_collection("regulatory_docs")
-    collection = chroma_client.create_collection(
-        name="regulatory_docs",
-        metadata={"hnsw:space": "cosine"},
-    )
+    """Rebuild the entire index from current files."""
+    global _chunks, _metadata, _vectorizer, _tfidf_matrix
+    _chunks = []
+    _metadata = []
+    _vectorizer = None
+    _tfidf_matrix = None
     _ingest_all_documents()
 
 
 def _ingest_all_documents():
-    """Scan data dir for .txt and .pdf files and ingest any new ones."""
-    if collection is None:
-        return
-
-    existing_sources = set()
-    if collection.count() > 0:
-        all_meta = collection.get(include=["metadatas"])
-        existing_sources = {m["source"] for m in all_meta["metadatas"]}
+    """Scan data dir for .txt and .pdf files and build TF-IDF index."""
+    global _chunks, _metadata, _vectorizer, _tfidf_matrix
 
     txt_files = glob.glob(os.path.join(DATA_DIR, "*.txt"))
     pdf_files = glob.glob(os.path.join(DATA_DIR, "*.pdf"))
@@ -57,15 +50,11 @@ def _ingest_all_documents():
         print("No regulatory documents found in", DATA_DIR)
         return
 
-    documents = []
-    metadatas = []
-    ids = []
+    _chunks = []
+    _metadata = []
 
     for filepath in all_files:
         filename = os.path.basename(filepath)
-        if filename in existing_sources:
-            continue
-
         text = _extract_text(filepath)
         if not text.strip():
             print(f"Warning: No text extracted from {filename}, skipping.")
@@ -73,18 +62,16 @@ def _ingest_all_documents():
 
         chunks = _chunk_text(text, chunk_size=800, overlap=150)
         for i, chunk in enumerate(chunks):
-            chunk_id = hashlib.md5(f"{filename}:{i}".encode()).hexdigest()
-            documents.append(chunk)
-            metadatas.append({"source": filename, "chunk_index": i})
-            ids.append(chunk_id)
+            _chunks.append(chunk)
+            _metadata.append({"source": filename, "chunk_index": i})
 
-    if documents:
-        # ChromaDB auto-embeds using its default embedding function (all-MiniLM-L6-v2)
-        collection.add(documents=documents, metadatas=metadatas, ids=ids)
-        new_sources = {m["source"] for m in metadatas}
-        print(f"Ingested {len(documents)} chunks from {len(new_sources)} new files.")
+    if _chunks:
+        _vectorizer = TfidfVectorizer(stop_words="english", max_features=5000)
+        _tfidf_matrix = _vectorizer.fit_transform(_chunks)
+        sources = {m["source"] for m in _metadata}
+        print(f"Indexed {len(_chunks)} chunks from {len(sources)} files using TF-IDF.")
     else:
-        print(f"Vector store has {collection.count()} chunks. No new files to ingest.")
+        print("No chunks to index.")
 
 
 def _extract_text(filepath: str) -> str:
@@ -127,20 +114,17 @@ def _chunk_text(text: str, chunk_size: int = 800, overlap: int = 150) -> list[st
         else:
             if current_chunk:
                 chunks.append(current_chunk.strip())
-            # If a single paragraph is longer than chunk_size, split it by sentences
             if len(para) > chunk_size:
                 words = para.split()
                 current_chunk = ""
                 for word in words:
                     if len(current_chunk) + len(word) + 1 > chunk_size:
                         chunks.append(current_chunk.strip())
-                        # Keep overlap from end of previous chunk
                         overlap_words = current_chunk.split()[-overlap // 5 :] if overlap else []
                         current_chunk = " ".join(overlap_words) + " " + word
                     else:
                         current_chunk = current_chunk + " " + word if current_chunk else word
             else:
-                # Start new chunk with overlap from end of previous
                 if chunks:
                     prev_words = chunks[-1].split()
                     overlap_text = " ".join(prev_words[-(overlap // 5) :]) if len(prev_words) > overlap // 5 else ""
@@ -152,6 +136,28 @@ def _chunk_text(text: str, chunk_size: int = 800, overlap: int = 150) -> list[st
         chunks.append(current_chunk.strip())
 
     return chunks
+
+
+def _search(query: str, n_results: int = 8, threshold: float = 0.05):
+    """Search chunks using TF-IDF cosine similarity."""
+    if not _chunks or _vectorizer is None or _tfidf_matrix is None:
+        return [], []
+
+    query_vec = _vectorizer.transform([query])
+    scores = cosine_similarity(query_vec, _tfidf_matrix).flatten()
+
+    # Get top n indices sorted by score
+    top_indices = np.argsort(scores)[::-1][:n_results]
+
+    result_chunks = []
+    result_meta = []
+    for idx in top_indices:
+        if scores[idx] < threshold:
+            continue
+        result_chunks.append(_chunks[idx])
+        result_meta.append(_metadata[idx])
+
+    return result_chunks, result_meta
 
 
 class ChatRequest(BaseModel):
@@ -178,27 +184,13 @@ You are grounded strictly in the provided documents. Accuracy is paramount — w
 
 @router.post("/chat", response_model=ChatResponse)
 def compliance_chat(req: ChatRequest):
-    if not collection or collection.count() == 0:
+    if not _chunks:
         raise HTTPException(
             status_code=503,
             detail="No regulatory documents loaded. Please upload documents to the knowledge base first.",
         )
 
-    # Retrieve relevant chunks
-    results = collection.query(query_texts=[req.message], n_results=8)
-
-    context_chunks = results["documents"][0] if results["documents"] else []
-    sources_raw = results["metadatas"][0] if results["metadatas"] else []
-    distances = results["distances"][0] if results.get("distances") else []
-
-    # Filter out low-relevance chunks (high distance = low relevance)
-    filtered_chunks = []
-    filtered_sources = []
-    for i, chunk in enumerate(context_chunks):
-        if distances and distances[i] > 1.5:
-            continue
-        filtered_chunks.append(chunk)
-        filtered_sources.append(sources_raw[i])
+    filtered_chunks, filtered_sources = _search(req.message, n_results=8)
 
     if not filtered_chunks:
         return ChatResponse(
