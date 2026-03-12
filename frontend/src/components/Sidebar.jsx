@@ -25,7 +25,7 @@ export default function Sidebar() {
             <span className="text-white font-bold text-sm">T</span>
           </div>
           <div>
-            <div className="font-bold text-heading text-sm">TapTap Send</div>
+            <div className="font-bold text-heading text-sm">TTS</div>
             <div className="text-xs text-accent">AI Platform</div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Sidebar() {
             </div>
             <div>
               <div className="text-sm font-medium text-heading">{user?.name || 'User'}</div>
-              <div className="text-xs text-muted">{user?.username}@taptapsend.com</div>
+              <div className="text-xs text-muted">{user?.username}@tts.com</div>
             </div>
           </div>
           <button onClick={logout} className="p-1.5 rounded-md hover:bg-surface text-muted">

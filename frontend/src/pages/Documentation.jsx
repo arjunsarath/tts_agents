@@ -4,14 +4,14 @@ const SECTIONS = [
   {
     title: 'Project Overview',
     icon: Layers,
-    content: `This is a working proof-of-concept demonstrating a comprehensive AI transformation roadmap for TapTap Send — a cross-border fintech powering remittances across 6 continents. Rather than a static document, it's a live web experience: a strategic AI adoption plan paired with two functional AI agents that teams can use immediately.
+    content: `This is a working proof-of-concept demonstrating a comprehensive AI transformation roadmap for TTS — a cross-border fintech powering remittances across 6 continents. Rather than a static document, it's a live web experience: a strategic AI adoption plan paired with two functional AI agents that teams can use immediately.
 
 The goal is simple: show, don't tell. Built in 2 days to demonstrate what's possible when AI meets fintech operations.`,
   },
   {
     title: 'Compliance & Regulatory Agent',
     icon: ShieldCheck,
-    content: `A RAG-based (Retrieval-Augmented Generation) conversational agent that answers questions about remittance regulations across TapTap Send's key corridors.
+    content: `A RAG-based (Retrieval-Augmented Generation) conversational agent that answers questions about remittance regulations across TTS's key corridors.
 
 How it works:
 • Regulatory documents (PDF/TXT) are uploaded to the Knowledge Base
@@ -79,7 +79,7 @@ Compliance Agent:
 • FCA Payment Services Regulations 2017 (UK MSB regulations)
 • Additional regulatory PDFs can be uploaded through the Knowledge Base
 
-With access to TapTap Send's internal documentation, SOPs, and compliance databases, these agents would become dramatically more powerful. The architecture is designed to drop in internal data sources without changing the underlying system.`,
+With access to TTS's internal documentation, SOPs, and compliance databases, these agents would become dramatically more powerful. The architecture is designed to drop in internal data sources without changing the underlying system.`,
   },
   {
     title: 'What Comes Next',
@@ -106,7 +106,7 @@ export default function Documentation() {
             Documentation
           </div>
           <h1 className="text-heading font-bold text-[28px] leading-tight">
-            TapTap Send AI Platform
+            TTS AI Platform
           </h1>
           <p className="text-body text-sm mt-2 leading-relaxed">
             A comprehensive AI transformation demo — built by Arjun to show what's possible when AI meets cross-border payments. Two working agents, a strategic roadmap, and a full RAG pipeline, delivered in 2 days.

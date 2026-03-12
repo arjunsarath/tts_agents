@@ -35,7 +35,7 @@ export default function Login() {
             <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-3">
               <span className="text-white font-bold text-lg">T</span>
             </div>
-            <h1 className="text-heading font-bold text-lg">TapTap Send</h1>
+            <h1 className="text-heading font-bold text-lg">TTS</h1>
             <span className="text-accent text-sm font-medium">AI Platform</span>
           </div>
 

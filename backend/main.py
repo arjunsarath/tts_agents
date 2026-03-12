@@ -18,7 +18,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="TapTap Send AI Platform", lifespan=lifespan)
+app = FastAPI(title="TTS AI Platform", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,

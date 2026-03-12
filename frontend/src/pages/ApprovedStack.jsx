@@ -44,7 +44,7 @@ export default function ApprovedStack() {
         <div>
           <h1 className="text-heading text-2xl font-bold">Approved Stack</h1>
           <p className="text-body text-sm mt-1">
-            {tools.length} AI tools approved for use across TapTap Send
+            {tools.length} AI tools approved for use across TTS
           </p>
         </div>
         <span className="shrink-0 px-3 py-1 rounded-full bg-accent-light/30 text-accent text-xs font-medium flex items-center gap-1.5">

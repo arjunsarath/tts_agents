@@ -51,7 +51,7 @@ def recommend_tools(req: RecommendRequest):
     )
 
     system_prompt = (
-        "You are an AI tool recommender for TapTap Send, a cross-border remittance company. "
+        "You are an AI tool recommender for TTS, a cross-border remittance company. "
         "The user will describe a task. Recommend 1-3 tools ONLY from the approved stack below.\n\n"
         f"APPROVED TOOLS:\n{tools_context}\n\n"
         "RULES:\n"
@@ -97,7 +97,7 @@ class ImproveRequest(BaseModel):
 @router.post("/improve")
 def improve_prompt(req: ImproveRequest):
     system_prompt = (
-        "You are a prompt engineering expert helping teams at TapTap Send write better AI prompts. "
+        "You are a prompt engineering expert helping teams at TTS write better AI prompts. "
         "The user will give you a basic prompt. Return an improved version with:\n"
         "1. A clear role/persona assignment\n"
         "2. Structured analysis instructions\n"

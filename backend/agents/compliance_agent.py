@@ -163,7 +163,7 @@ class ChatResponse(BaseModel):
     sources: list[str]
 
 
-SYSTEM_PROMPT = """You are a compliance and regulatory research assistant for TapTap Send, a cross-border remittance company operating across 6 continents.
+SYSTEM_PROMPT = """You are a compliance and regulatory research assistant for TTS, a cross-border remittance company operating across 6 continents.
 
 CRITICAL RULES:
 1. Answer ONLY using information from the provided context documents. Do NOT use your general knowledge.

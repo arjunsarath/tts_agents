@@ -95,7 +95,7 @@ const agents = [
   {
     title: 'Compliance & Regulatory Agent',
     description:
-      'Ask questions about regulatory requirements across TapTap Send\'s operating markets. Get instant answers grounded in real compliance documentation.',
+      'Ask questions about regulatory requirements across TTS\'s operating markets. Get instant answers grounded in real compliance documentation.',
     to: '/compliance',
     cta: 'Try Agent',
     Icon: ShieldCheck,
@@ -154,11 +154,11 @@ export default function Landing() {
       <nav className="sticky top-0 z-50 border-b border-border bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2" aria-label="TapTap Send home">
+          <Link to="/" className="flex items-center gap-2" aria-label="TTS home">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent">
               <span className="text-sm font-bold text-white">T</span>
             </div>
-            <span className="text-heading font-semibold">TapTap Send</span>
+            <span className="text-heading font-semibold">TTS</span>
           </Link>
 
           {/* Center links — hidden on small screens */}
@@ -205,7 +205,7 @@ export default function Landing() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-body">
-          A comprehensive AI transformation roadmap for TapTap Send — built to
+          A comprehensive AI transformation roadmap for TTS — built to
           show what's possible when AI meets cross-border payments.
         </p>
 
@@ -278,7 +278,7 @@ export default function Landing() {
               AI Impact Across Every Function
             </h2>
             <p className="mt-4 text-body">
-              Where the biggest opportunities live across TapTap Send's
+              Where the biggest opportunities live across TTS's
               operations.
             </p>
           </div>
@@ -338,7 +338,7 @@ export default function Landing() {
             Two Agents You Can Use Today
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-[#9CA3AF]">
-            Interactive AI tools built specifically for TapTap Send's compliance
+            Interactive AI tools built specifically for TTS's compliance
             and adoption workflows.
           </p>
 
@@ -384,7 +384,7 @@ export default function Landing() {
               Ready to Transform Your Operations?
             </h2>
             <p className="mt-3 max-w-md text-[#9CA3AF]">
-              See how AI can reshape cross-border payments at TapTap Send.
+              See how AI can reshape cross-border payments at TTS.
             </p>
             <Link
               to="/login"
@@ -397,7 +397,7 @@ export default function Landing() {
 
           {/* Footer line */}
           <p className="mt-16 text-center text-xs text-[#525252]">
-            A TapTap Send AI initiative &middot; Built by Arjun
+            A TTS AI initiative &middot; Built by Arjun
           </p>
         </div>
       </footer>

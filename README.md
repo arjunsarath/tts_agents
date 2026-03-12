@@ -1,6 +1,6 @@
-# TapTap Send AI Platform
+# TTS AI Platform
 
-Internal AI transformation platform for TapTap Send, a cross-border remittance company. Built as a working prototype demonstrating how AI tools can accelerate compliance, research, and team productivity.
+Internal AI transformation platform for TTS, a cross-border remittance company. Built as a working prototype demonstrating how AI tools can accelerate compliance, research, and team productivity.
 
 ## Features
 
