@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { API_URL } from '../config'
 import {
   Sparkles,
   Bot,
@@ -47,7 +48,7 @@ function PromptLibraryTab() {
   const [prompts, setPrompts] = useState([])
 
   useEffect(() => {
-    fetch('/api/copilot/prompts')
+    fetch(`${API_URL}/api/copilot/prompts`)
       .then((res) => res.json())
       .then((data) => setPrompts(data))
       .catch(() => setPrompts([]))
@@ -127,7 +128,7 @@ function ToolRecommenderTab() {
     setLoading(true)
     setResult(null)
     try {
-      const res = await fetch('/api/copilot/recommend', {
+      const res = await fetch(`${API_URL}/api/copilot/recommend`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ task: task.trim() }),
@@ -284,7 +285,7 @@ function PromptImproverTab() {
     setLoading(true)
     setResult(null)
     try {
-      const res = await fetch('/api/copilot/improve', {
+      const res = await fetch(`${API_URL}/api/copilot/improve`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: prompt.trim() }),

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { ShieldCheck, Send, Bot, User } from 'lucide-react'
+import { API_URL } from '../config'
 
 const EXAMPLE_QUERIES = [
   'KYC requirements for Morocco',
@@ -72,7 +73,7 @@ export default function ComplianceAgent() {
     setIsTyping(true)
 
     try {
-      const res = await fetch('/api/compliance/chat', {
+      const res = await fetch(`${API_URL}/api/compliance/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text.trim() }),

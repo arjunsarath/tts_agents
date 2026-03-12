@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Blocks, Zap, Loader2 } from 'lucide-react'
+import { API_URL } from '../config'
 
 const CATEGORY_STYLES = {
   'AI Assistants':            'bg-purple-50 text-purple-700',
@@ -18,7 +19,7 @@ export default function ApprovedStack() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/api/copilot/tools')
+    fetch(`${API_URL}/api/copilot/tools`)
       .then((res) => res.json())
       .then((data) => { setTools(data); setLoading(false) })
       .catch(() => { setTools([]); setLoading(false) })

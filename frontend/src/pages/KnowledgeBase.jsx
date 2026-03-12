@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { FileText, FolderOpen, Upload, Trash2, Loader2, X, CheckCircle2 } from 'lucide-react'
+import { API_URL } from '../config'
 
 const BADGE_STYLES = {
   accent: 'bg-accent-light/30 text-accent',
@@ -66,7 +67,7 @@ function DocumentPreviewModal({ doc, onClose }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(`/api/knowledge/documents/${encodeURIComponent(doc.source)}/content`)
+    fetch(`${API_URL}/api/knowledge/documents/${encodeURIComponent(doc.source)}/content`)
       .then((res) => res.json())
       .then((data) => { setContent(data.content); setLoading(false) })
       .catch(() => { setContent('Failed to load document content.'); setLoading(false) })
@@ -114,7 +115,7 @@ function DocumentCard({ doc, onDelete, onPreview }) {
     if (!confirm(`Delete "${doc.title}"? This will rebuild the vector store.`)) return
     setDeleting(true)
     try {
-      await fetch(`/api/knowledge/documents/${encodeURIComponent(doc.source)}`, {
+      await fetch(`${API_URL}/api/knowledge/documents/${encodeURIComponent(doc.source)}`, {
         method: 'DELETE',
       })
     } catch {
@@ -163,7 +164,7 @@ export default function KnowledgeBase() {
   const fileInputRef = useRef(null)
 
   const fetchDocuments = () => {
-    fetch('/api/knowledge/documents')
+    fetch(`${API_URL}/api/knowledge/documents`)
       .then((res) => res.json())
       .then((data) => {
         setDocuments(data.documents || [])
@@ -208,7 +209,7 @@ export default function KnowledgeBase() {
     setTimeout(advanceStep, 400)
 
     try {
-      const res = await fetch('/api/knowledge/upload', {
+      const res = await fetch(`${API_URL}/api/knowledge/upload`, {
         method: 'POST',
         body: formData,
       })
